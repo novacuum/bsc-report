@@ -1,0 +1,90 @@
+
+\documentclass[oneside,a4paper]{book}
+%\pagestyle{headings}
+
+\input{preamble}
+
+% A B S T R A C T
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\chapter*{\centering Abstract}
+\begin{quotation}
+\noindent
+The main goal of this project is to evaluate the application of \gls{dl} models for the classification of syllable types in recordings from the pups of the neotropical greater sac-winged bat (\emph{Saccopteryx bilineata}).
+To realise this, two experiments were conducted, with the first one demonstrating how it is feasible and the second one presenting an actual realization of a prototype of an automated syllable type classification pipeline.
+
+We aimed to classify the different syllable types of the adult territorial song and one variable juvenile syllable within variable vocal practice sequences. This was worked out in a supervised machine learning framework, where we investigated the effect of different preprocessing variants in combination with the features as spectrograms or \gls{hog}.
+For the models, we considered different types and different constellations of artificial neural networks (recurrent, convolution and densely connected).
+
+Our findings are promising and show that it is feasible to create an automated syllable type classification application in the given objective, although the syllables of the juveniles show a high degree of intra- and interindividudal variability because they mirror developmental and learning processes throughout ontogeny.
+\end{quotation}
+\clearpage
+
+% Acknowledgements
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\chapter*{\centering Acknowledgements}
+\begin{quotation}
+\noindent
+I would like to express my gratitude to Ahana Aurora Fernandez for providing the labelled dataset and the hours of discussion and more that formed the basis for conducting these experiments.
+For their support and patience with me, I sincerely thank my supervisors Andreas Fischer and Daniel Wegman.
+Thanks also to Petar Veličković, as many of the schemes on neural networks are modified versions of his publicly available work, his \href{https://github.com/PetarV-/TikZ}{TiKZ GitHub repository} was a little treasure for me.
+And for providing a \gls{gpu} cluster, I would like to thanks the HPC team of UBELIX (http://www.id.unibe.ch/hpc), the high-performance computing cluster at the University of Bern, Switzerland.
+And finally, I would like to thanks my friends Anna, Bettina and Sophie who all proofread my thesis.
+\end{quotation}
+\clearpage
+\glsresetall
+
+% C O N T E N T S
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\tableofcontents
+
+\include{chapter/Introduction}
+\newpage{\pagestyle{empty} \cleardoublepage}
+
+
+\include{chapter/Background}
+\newpage{\pagestyle{empty} \cleardoublepage}
+
+\include{chapter/Datasets}
+\newpage{\pagestyle{empty} \cleardoublepage}
+
+\include{chapter/Method}
+\newpage{\pagestyle{empty} \cleardoublepage}
+
+
+\include{chapter/Experiments}
+\newpage{\pagestyle{empty} \cleardoublepage}
+
+
+\include{chapter/Conclusions}
+\newpage{\pagestyle{empty} \cleardoublepage}
+
+\begin{appendix}
+\include{chapter/appendix}
+\newpage{\pagestyle{empty} \cleardoublepage}
+\end{appendix}
+\addcontentsline{toc}{chapter}{\numberline{}List of Models}
+\begin{refcontext}[sorting=none]{}
+    \printbibliography[title={Models}, type=model, env=model]
+\end{refcontext}
+\addcontentsline{toc}{chapter}{\numberline{}List of Tables}
+\listoftables
+\addcontentsline{toc}{chapter}{\numberline{}List of Figures}
+\listoffigures
+\glsaddall
+\printacronyms[title=List of Acronyms]
+\addcontentsline{toc}{chapter}{\numberline{}List of Acronyms}
+\addcontentsline{toc}{chapter}{\numberline{}Bibliography}
+%\nocite{*}
+\printbibliography[nottype=model]
+
+% \cleardoublepage
+% \pagestyle{empty}
+% \begin{figure}
+% \centering
+% \includepdf[pages=-,offset=11mm 11mm]{MSc_masterarbeit_erklaerung_eRSL18_eng_signed.pdf}
+% \end{figure}
+
+%END Doc
+%-------------------------------------------------------
+
+\end{document}

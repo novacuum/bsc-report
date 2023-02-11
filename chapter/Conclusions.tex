@@ -1,0 +1,78 @@
+\chapter{Conclusions and Outlook}
+\label{ch:conclusions}
+We summarise what we have found and indicate where the journey should go by outlining the essence of this work in the next sections.
+% What we have and where to go, this is the essence of the following sections.
+
+\section{Conclusions}
+We investigated how different deep learning model architectures were able to classify the different preprocessed features, i.e. their ability to create a mapping between features and their respective syllables. Besides the promising \gls{dl} model DenseNet, we adopted the other \gls{dl} models from Gilles Waeber's work \cite{Waeber2019BirdLearning}, namely the \gls{lstm}, as well as the CNN 1D and the CNN 2D.
+We investigated some parameters of the feature processing, such as the sensitivity of the noise reduction filter, as well as the resolution of the spectrograms.
+
+Based on the results, we were able to show that \gls{ml} is suitable to classify the provided syllables with an acceptable accuracy given the \gls{dl} models applied. Furthermore, we elicited which preprocessings improve or worsen the \gls{dl} model performance, which is partially model type specific.
+The experiments clearly showed that the \gls{lstm} performs better on HOG features and the CNN networks on raw features. The results in terms of spectrogram resolution were less clear. In a few cases it is obvious that higher resolution in frequency and time leads to better results, e.g. in the padding experiment high resolution spectrogram images lead to higher accuracy for the CNN 2D model. This is in line with expectations as we study high frequencies which are better reproduced in high resolution spectrograms.
+The effect of noise reduction is rather confusing. 
+From the visual side, one sees that the syllable structures on the spectrogram are distorted when noise filtering is applied, but the \gls{dl} models sometimes perform better and sometimes worse with noise filtered features. 
+Overall, there is evidence that no noise reduction gives the best \gls{dl} model performance and higher noise reduction worsens the results.
+
+Besides the few parameters examined, we stuck to the features and corresponding parameters that are already implemented by the applied framework and therefore arbitrarily chosen, e.g. the selection of the slit-style \gls{hog} is never compared with a basic \gls{hog} transformation, nor are different configurations examined. 
+This also applies to the window type of the Fourier transform.
+Future work should therefore take the values of these parameters with a grain of salt and would be well advised to take these values from other works that has investigated the parameter in question or to investigate them in their own experiments.
+
+Although many works on vocalisation extract high-level features, which definitely shortens the input size, we did not consider this. 
+Our intention was to train \gls{dl} models on low-level features, which they can use to learn any high-level feature extraction.
+Therefore, we cannot make any statements about how learning \gls{dl} models on usual high-level features compares to the variant we studied.
+However, this would be interesting to examine further, as a major problem with our \gls{dl} models is overfitting, which usually starts in the early epochs. This could be due to the small number of samples as opposed to the large number of features, especially for some syllable types. Therefore, instead of generating more labelled data, one could also investigate the training of the \gls{dl} models using high-level features.
+
+Concerning the difficulties with the gradual change of a syllable type during development, we were able to show with these experiments that the networks coped well. However, it should be taken into consideration that humans could only mark syllables that were recognisable to human perception and thus had already matured somewhat. Since we are currently still trying to achieve a similar accuracy to a human expert with the \gls{dl} models, there is still a lot of space for future work.
+
+% We encountered memory consumption problems when we fed the DenseNet model with rather large spectrogram images of about 1000 pixels wide and 512 pixels high. We tried running the model on two \glspl{gpu} and applying smaller stack sizes, but we again ran into memory consumption problems and had to omit this experiment. Since we are likely to get better performance with higher resolution, i.e. larger images, we could filter out the frequencies that are not used by the bat syllables, which would reduce the height of the spectrogram images. Another approach would be to enable the mixed-precision policy in TensorFlow for training the network, which should reduce memory consumption and speed up training.
+
+During writing we stumbled over an interesting discussion about k-fold \gls{cv}.
+One of the criticisms is the inappropriate recommendation of performing experiments with the aim of later setting $k = 10$ or $k = 5$ for model validation using k-fold \gls{cv}, as this seems to lead to an inaccurate prediction error estimation \cite{Zhang2015}.
+Moreover, the initialisation of the weights is not set to a specific seed, as are the calculations of Tensorflow and CuDNN, which contributes to a further increase in variability.
+According to the arguments of Zhang et al. \cite{Zhang2015} and how the models are initialized the performance of the models in our results is not fully accurate and thus cannot be used for a robust comparison.
+How accurate the results are and what the additional variability due to omitting seed initialisation contributes is not known to the author at this time and requires further knowledge acquisition about the "variance bias tradeoff" combined with data and model specifications.
+
+% variance / bias tradeoff
+% stability of the model
+% outliers in the data, variance in the data
+
+The results from the seq experiment describing the pipeline of the automated syllable type classifier prototype are promising at the first glance, but by examining the confusion matrices it becomes clear that more work is needed to distinguish between the syllable types and the background samples.
+
+In a final experiment, we implemented a simple process for automatic syllable type classification that provides a tabular result, describing during which timespan which syllable type was recognised. This process is based on the structure of the sequence experiments and can therefore be used with all models trained in these experiments. We did some tests with the best model from the sequence experiments \cite{nn_densNet_scs_r3_p30s5l60_raw_100}, but the results were disappointing and highlighted the problem of syllables being confused with background and vice versa.
+This is shown by the fact that the \gls{dl} model labels the background as a syllable or recognises a timespan as a background in the middle of a syllable.
+Since this problematic issue was already visible in the diffusion matrix of the test set results of the \gls{dl} model in question, it is aggravated on data belonging to different recordings, showing poor generalisation and overfitting of the \gls{dl} model.
+
+Overall, we have gathered a good amount of knowledge about the classification of syllable types from vocalisations of bat pups and provide a framework for future work on this topic. How the work might continue is explained in the next section.
+
+\section{Outlook}
+We gained relatively good results from the variable length test experiment, so one could consider combining the \gls{lstm} network with the same pipeline with a syllable segmentation algorithm.
+There exists a lot of research on syllable segmentation with promising results for higher quality audios, i.e. with as little noise in them as possible.
+For high quality audios, a combination of automatic syllable segmentation and later classification with the \gls{lstm} network could give satisfying results given the current requirements.
+If the audio quality would drop, one could further apply the raw audio bitstream to an \gls{ann}, where the network could decide how to transform the data at a deeper level, learning a more accurate transformation for syllable classification.
+As this field is relatively young, current experiments need a lot of time to evaluate the concepts as there is not much work to rely on.
+Interesting work is addressing how the raw waveform might be represented, Okawa et al. propose a bit representation of the waveform where they convert the integer values into a list of bit vectors \cite{Okawa2019}.
+
+In the sequence experiment, we encountered the problem that a good amount of syllables were classified as background, which could be due to the not exhaustively labelled data.
+Besides the additional manual labeling of the data one can use the developed silence detection algorithm to filter out non silence unlabeled parts of the audio.
+
+Based on better quality data, one could explore the sequence-to-sequence approach in combination with an \gls{ann} that analyses the bitstream directly. In the sequence-to-sequence approach, an encoder analyses the input, then a decoder uses the inner states of the encoder in combination with the previous sequence (this can also be just a start symbol) to generate a new symbol that is appended to the previous sequence. This is repeated until the newly generated symbol is the end symbol signalling the end of the "translation".
+This would also be a variant that allows the beginning and end of syllables in a sequence to be recognised.
+
+For assessing the overfitting problem, one possible approach would be to generate more training samples or apply a semi supervised learning process called co-training as we have additional unlabeled data.
+As we already use different models this concept could be adapted with ease.
+An additional approach could be to study the data in a more advanced way and build the different subsets with knowledge about how the syllable structure evolves over time.
+This would result in the model seeing the syllables in the different developmental forms, which would ultimately improve the generalisation of the model.
+And as already applied, one can try different configurations on the dropout rate and affected layers.
+
+A different direction would be to learn more about the models in human speech recognition and perhaps try to adapt the findings to bat data. Unfortunately, this direction involves information about speech structure that is lacking at current time, hence requiring more knowledge about bat song syntax and information contained in their acoustics.
+
+Another approach would be to study the latent feature space of the bat vocalisations. This could be conducted with several generative neural networks applying \gls{umap} to the songs for searching a lower dimensional space describing the inner structure as proposed by Sainburg et al. \cite{Sainburg2020}.
+
+In addition to the considerations of increasing classification performance, functional and usable software needs intuitive usability and readable results both for humans and for software applications that further process the results. Unlike all classification considerations, this can be achieved by defining appropriate software requirements in close cooperation with clients.
+Since this kind of software is developed without much consideration for resources, portability or anything else, there is still a lot of room for improvement.
+An example could be at which stage the spectrograms are created, as when this is applied before the splitting step, one could consume much less storage space.
+
+Recently, research into understanding human intelligence in engineering terms has focused on how humans discover and learn from the world in their early years - concepts about learning processes that can be applied to machine learning.
+In addition, the ongoing rapid development of \gls{dl} is enabling more problems in bioacoustics to be addressed.
+Some of these problems are related to cognitive science, especially speech development.
+Thus, a promising future is emerging for gaining insights into our speech development at an accelerated pace, which could then potentially be adapted for AI processes.

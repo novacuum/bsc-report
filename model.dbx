@@ -1,0 +1,19 @@
+\ProvidesFile{model.dbx}
+\RequireBiber[3]
+
+\DeclareDatamodelEntrytypes{model}
+\DeclareDatamodelFields[type=field, datatype=verbatim]{id,num}
+% \DeclareDatamodelFields[type=list, datatype=name]{title}
+\DeclareDatamodelFields[type=field, datatype=literal]{dataset,features,parameters,results}
+\DeclareDatamodelEntryfields[model]{id,title,dataset,features,parameters,results,num}
+\DeclareDatamodelConstraints[model]{
+  \constraint[type=mandatory]{
+    \constraintfield{id}
+    \constraintfield{title}
+    \constraintfield{dataset}
+    \constraintfield{features}
+    \constraintfield{parameters}
+    \constraintfield{results}
+    \constraintfield{num}
+  }
+}

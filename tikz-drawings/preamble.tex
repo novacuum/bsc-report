@@ -1,0 +1,41 @@
+\usepackage{import}
+\usepackage{etoolbox}
+\usepackage{graphicx}
+\subimport{layers/}{init}
+\usetikzlibrary{positioning}
+\usetikzlibrary{3d} %for including external image
+\usetikzlibrary{decorations,shapes}
+\usetikzlibrary{decorations.shapes}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{calc}
+
+\def\ConvColor{rgb:yellow,5;red,2.5;white,5}
+\def\ConvReluColor{rgb:yellow,5;red,5;white,5}
+\def\PoolColor{rgb:red,1;black,0.3}
+\def\UpsampleColor{rgb:green,5; white,2}
+\def\DetectColor{rgb:red,5; white,2}
+\def\UnpoolColor{rgb:blue,2;green,1;black,0.3}
+\def\FcColor{rgb:blue,5;red,2.5;white,5}
+\def\FcReluColor{rgb:blue,5;red,5;white,4}
+\def\SoftmaxColor{rgb:magenta,5;black,7}
+\def\SumColor{rgb:green,1}
+\def\LSTMColor{rgb:green,1}
+\def\LSTMCLastColor{rgb:green,5}
+\def\ShortcutColor{rgb:blue,3; green,1; white,5}
+\def\MultColor{rgb:magenta,1}
+\def\ConcColor{rgb:red,5}
+\def\input_image{image/input.png}
+
+\newcommand\highcontrast[2]{
+    % Blur
+    \foreach \x in {-0.05,0.05} {
+        \foreach \y in {-0.05,0.05} {
+            % \node[xshift=\x,yshift=\y,black!10!white] at (#1) {\large #2};
+            \node[black!10!white,#2] at (\x em, \y em) {\large #1};
+        }
+    }
+    
+    % Main
+    \node[#2] {\large #1};
+}

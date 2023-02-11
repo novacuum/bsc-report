@@ -1,0 +1,25 @@
+%\ProvidesPackage{init}
+\usetikzlibrary{quotes,arrows.meta}
+\usetikzlibrary{positioning}
+
+\def\edgecolor{rgb:blue,4;red,1;green,4;black,3}
+\def\fusecolor{darkgray}
+\newcommand{\midarrow}[1][]{\tikz \draw[-Stealth,line width =0.8mm,draw=\edgecolor, #1, fill=white,inner sep=0pt, opacity=1] (-0.3,0) -- ++(0.3,0);}
+\newcommand{\copymidarrow}{\tikz \draw[-Stealth,line width=0.8mm, draw={rgb:blue,4;red,1;green,1;black,3}] (-0.3,0) -- ++(0.3,0);}
+\newcommand{\fusearrow}[1][]{\tikz \draw[-Bar,line width =0.8mm,draw=\edgecolor, #1] (-0.3,0) -- ++(0.3,0);}
+\newcommand{\midline}{\tikz \draw (-0.3,0) -- ++(0.3,0);}
+\newcommand{\arrow}{\tikz \draw[-Stealth,line width =0.8mm,draw=\edgecolor] (-0.1,0) -- ++(0,0);}
+\newcommand{\drawgrid}[3]{\tikz \draw [white!30, line width =0.5mm, step=#3, opacity=0.5] (0,0) grid (#1,#2);}
+\newcommand{\drawcoloredgrid}[4]{\tikz \draw [#4, line width =0.5mm, step=#3, opacity=0.5] (0,0) grid (#1,#2);}
+\newcommand{\drawboxconnection}[1]{
+    \ifdefempty{#1}{}{\draw [connection] (#1) -- node[midway] {\midarrow} (0,0,0);}
+}
+
+
+\usepackage{Style}
+\usepackage{Ball}
+\usepackage{Box}
+\usepackage{BandedBox}
+\usepackage{RightBandedBox}
+\usepackage{LeftBandedBox}
+\usepackage{SolidBox}

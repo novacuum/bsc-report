@@ -1,0 +1,23 @@
+\chapter{AP1}
+\section{Image sources}
+Following figures are modified variants of some figures in the \href{https://github.com/PetarV-/TikZ}{TiKZ GitHub repository} by Petar Veličković: \figref{cnn_schema}, \figref{lstm_schema} and \figref{mlp_schema}.
+The \gls{dl} model figures \figref{ml_model_cnn} and \figref{ml_model_lstm} are drawn with the code fragments from \href{https://github.com/HarisIqbal88/PlotNeuralNet}{PlotNeuralNet GitHub repository} by Haris Iqbal.
+
+\clearpage
+\section{Supplementary Tables}
+\begin{table}[h!]
+\centering
+\input{table/generated/result_overview_scs_all}
+\caption{Results of the final sequence experiment, sorted in descending order by test accuracy.}
+\label{tab:result_overview_scs_all}
+\end{table}
+
+\clearpage
+\section{Supplementary Images}
+\begin{figure}[ht!]
+\centering
+  \includesvg[inkscapelatex=false, width=0.7\textwidth]{image/generated/model_distribution_sct_compressed.svg}\hfill
+  \caption{Scatter plot of the distribution of the model validation accuracy of the compressed test experiment, differentiated by sensitivity and feature-type.}
+  \label{fig:model_distribution_sct_compressed}
+\end{figure}
+

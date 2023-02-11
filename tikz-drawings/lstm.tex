@@ -1,0 +1,110 @@
+\documentclass[border=15pt, multi, tikz]{standalone}
+\input{preamble}
+
+
+\def\poolsep{1}
+\def\modelscale{1}
+\def\modelcalcscale{0.15}
+\newcommand{\poolsize}[1]{(#1-2)*\modelcalcscale}
+
+\begin{document}
+\begin{tikzpicture}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Draw Layer Blocks
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% input
+ \node[canvas is zy plane at x=1] (image0) at (-3,0,0) {\includegraphics[width=400pt, height=256pt]{\input_image}};
+ 
+% lstm 1 & 2
+\pic[shift={(2, 0, 0)}, ] at (image0)
+    {Box={
+        name=lstm1, ylabel=256,
+        fill=\LSTMColor,
+        width={256*\modelcalcscale}, height=256*\modelcalcscale, depth=400*\modelcalcscale,
+        prevpos=image0
+    }};
+\pic[shift={(0, 0, 0)}, ] at (lstm1-east)
+    {RightBandedBox={
+        caption={"Returns the last element only"},
+        name=lstm2, ylabel=256, zlabel=400,
+        fill=\LSTMColor, bandfill=\LSTMCLastColor,
+        width={256*\modelcalcscale}, height=256*\modelcalcscale, depth=400*\modelcalcscale,
+    }};
+
+% dense 1
+\pic[shift={(5,0,0)}] at (lstm2-east) 
+    {Box={
+    	name=dense1,
+    	caption=relu,
+    	zlabel=1024,
+    	fill=\PoolColor,
+    	height=1*\modelcalcscale, width=1*\modelcalcscale, depth=1024*\modelcalcscale,
+    }};
+
+% dense 2
+\pic[shift={(2,0,0)}] at (dense1-east) 
+    {Box={
+    	name=dense2,
+    	caption=relu,
+    	zlabel=1024,
+    	fill=\PoolColor,
+    	height=1*\modelcalcscale, width=1*\modelcalcscale, depth=1024*\modelcalcscale,
+    }};
+    
+% dense softmax
+\pic[shift={(3,0,0)}] at (dense2-east) 
+    {Box={
+    	name=dense_softmax,
+    	caption=softmax,
+    	zlabel=6,
+    	fill=\PoolColor,
+    	height=1*\modelcalcscale, width=1*\modelcalcscale, depth=6,
+    }};
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Draw connections
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% pool & fullconnection
+\draw	[densely dashed]  (lstm2-farnortheast) -- (dense1-nearnorthwest);
+\draw	[densely dashed]  (lstm2-farsoutheast) -- (dense1-nearsouthwest);
+\draw	[densely dashed]  (lstm2-farnortheast)  -- (dense1-farnorthwest);
+\draw	[densely dashed]  (lstm2-farsoutheast)  -- (dense1-farsouthwest);
+
+\draw	[densely dashed]  (dense1-nearnortheast)    	--  									(dense2-nearnorthwest);
+\draw	[densely dashed]  (dense1-farnortheast)    	--  									(dense2-farnorthwest);
+
+\draw	[densely dashed]  (dense2-nearnortheast)    	--  									(dense_softmax-nearnorthwest);
+\draw	[densely dashed]  (dense2-farnortheast)    	--  									(dense_softmax-farnorthwest);
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Draw Legend
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pic[shift={(0, -5, 0)}] at (lstm1-south)
+{Box={
+        name=legend1,
+        fill=\LSTMColor,
+        height=10.0,
+        depth=10.0,
+        width={2}
+    }
+};
+\node [shift={(0, -2, 0)}] at (legend1-anchor) {\LARGE{LSTM layer}};
+
+
+\pic[shift={(10, 0, 0)}] at (legend1-west)
+{Box={
+        name=legend_3,
+        fill=\PoolColor,
+        height=0.5,
+        depth=20,
+        width={0.5}
+    }
+};
+\node [shift={(0, -2, 0)}] at (legend_3-anchor) {\LARGE{Dense layer}};
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{tikzpicture}
+\end{document}\grid

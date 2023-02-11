@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with matplotlib (https://matplotlib.org/) -->
+<svg height="95.453812pt" version="1.1" viewBox="0 0 396.859375 95.453812" width="396.859375pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <metadata>
+  <rdf:RDF xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2021-02-18T11:35:34.937617</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.3.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linecap:butt;stroke-linejoin:round;}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 95.453812 
+L 396.859375 95.453812 
+L 396.859375 0 
+L 0 0 
+z
+" style="fill:#ffffff;"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 47.359375 57.096 
+L 382.159375 57.096 
+L 382.159375 7.2 
+L 47.359375 7.2 
+z
+" style="fill:#ffffff;"/>
+   </g>
+   <g id="patch_3">
+    <path clip-path="url(#p67daa78bc0)" d="M 47.359375 54.828 
+L 287.857375 54.828 
+L 287.857375 45.278526 
+L 47.359375 45.278526 
+z
+" style="fill:#90d743;"/>
+   </g>
+   <g id="patch_4">
+    <path clip-path="url(#p67daa78bc0)" d="M 47.359375 42.891158 
+L 76.375375 42.891158 
+L 76.375375 33.341684 
+L 47.359375 33.341684 
+z
+" style="fill:#31688e;"/>
+   </g>
+   <g id="patch_5">
+    <path clip-path="url(#p67daa78bc0)" d="M 47.359375 30.954316 
+L 99.811375 30.954316 
+L 99.811375 21.404842 
+L 47.359375 21.404842 
+z
+" style="fill:#443983;"/>
+   </g>
+   <g id="patch_6">
+    <path clip-path="url(#p67daa78bc0)" d="M 47.359375 19.017474 
+L 191.323375 19.017474 
+L 191.323375 9.468 
+L 47.359375 9.468 
+z
+" style="fill:#440154;"/>
+   </g>
+   <g id="patch_7">
+    <path clip-path="url(#p67daa78bc0)" d="M 287.857375 54.828 
+L 293.437375 54.828 
+L 293.437375 45.278526 
+L 287.857375 45.278526 
+z
+" style="fill:#c0c0c0;"/>
+   </g>
+   <g id="patch_8">
+    <path clip-path="url(#p67daa78bc0)" d="M 76.375375 42.891158 
+L 81.955375 42.891158 
+L 81.955375 33.341684 
+L 76.375375 33.341684 
+z
+" style="fill:#c0c0c0;"/>
+   </g>
+   <g id="patch_9">
+    <path clip-path="url(#p67daa78bc0)" d="M 99.811375 30.954316 
+L 105.391375 30.954316 
+L 105.391375 21.404842 
+L 99.811375 21.404842 
+z
+" style="fill:#c0c0c0;"/>
+   </g>
+   <g id="patch_10">
+    <path clip-path="url(#p67daa78bc0)" d="M 191.323375 19.017474 
+L 196.903375 19.017474 
+L 196.903375 9.468 
+L 191.323375 9.468 
+z
+" style="fill:#c0c0c0;"/>
+   </g>
+   <g id="patch_11">
+    <path clip-path="url(#p67daa78bc0)" d="M 293.437375 54.828 
+L 304.597375 54.828 
+L 304.597375 45.278526 
+L 293.437375 45.278526 
+z
+"/>
+   </g>
+   <g id="patch_12">
+    <path clip-path="url(#p67daa78bc0)" d="M 81.955375 42.891158 
+L 93.115375 42.891158 
+L 93.115375 33.341684 
+L 81.955375 33.341684 
+z
+"/>
+   </g>
+   <g id="patch_13">
+    <path clip-path="url(#p67daa78bc0)" d="M 105.391375 30.954316 
+L 116.551375 30.954316 
+L 116.551375 21.404842 
+L 105.391375 21.404842 
+z
+"/>
+   </g>
+   <g id="patch_14">
+    <path clip-path="url(#p67daa78bc0)" d="M 196.903375 19.017474 
+L 208.063375 19.017474 
+L 208.063375 9.468 
+L 196.903375 9.468 
+z
+"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path d="M 0 0 
+L 0 3.5 
+" id="mcc65915ac4" style="stroke:#000000;stroke-width:0.8;"/>
+      </defs>
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="47.359375" xlink:href="#mcc65915ac4" y="57.096"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-family:TeX Gyre Pagella;font-size:10px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 47.359375, 71.355375)" x="47.359375" y="71.355375">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="103.159375" xlink:href="#mcc65915ac4" y="57.096"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-family:TeX Gyre Pagella;font-size:10px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 103.159375, 71.355375)" x="103.159375" y="71.355375">100</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="158.959375" xlink:href="#mcc65915ac4" y="57.096"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-family:TeX Gyre Pagella;font-size:10px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 158.959375, 71.355375)" x="158.959375" y="71.355375">200</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="214.759375" xlink:href="#mcc65915ac4" y="57.096"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-family:TeX Gyre Pagella;font-size:10px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 214.759375, 71.355375)" x="214.759375" y="71.355375">300</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="270.559375" xlink:href="#mcc65915ac4" y="57.096"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-family:TeX Gyre Pagella;font-size:10px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 270.559375, 71.355375)" x="270.559375" y="71.355375">400</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="326.359375" xlink:href="#mcc65915ac4" y="57.096"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-family:TeX Gyre Pagella;font-size:10px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 326.359375, 71.355375)" x="326.359375" y="71.355375">500</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_7">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="382.159375" xlink:href="#mcc65915ac4" y="57.096"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-family:TeX Gyre Pagella;font-size:10px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 382.159375, 71.355375)" x="382.159375" y="71.355375">600</text>
+     </g>
+    </g>
+    <g id="text_8">
+     <text style="font-family:TeX Gyre Pagella;font-size:10px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 214.759375, 85.444437)" x="214.759375" y="85.444437">number of samples</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_8">
+      <defs>
+       <path d="M 0 0 
+L -3.5 0 
+" id="m4aa78f10e3" style="stroke:#000000;stroke-width:0.8;"/>
+      </defs>
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="47.359375" xlink:href="#m4aa78f10e3" y="50.053263"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-family:TeX Gyre Pagella;font-size:10px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 40.359375, 53.682951)" x="40.359375" y="53.682951">UPS</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_9">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="47.359375" xlink:href="#m4aa78f10e3" y="38.116421"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-family:TeX Gyre Pagella;font-size:10px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 40.359375, 41.746109)" x="40.359375" y="41.746109">B4</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_10">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="47.359375" xlink:href="#m4aa78f10e3" y="26.179579"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-family:TeX Gyre Pagella;font-size:10px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 40.359375, 29.809266)" x="40.359375" y="29.809266">B3</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_11">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="47.359375" xlink:href="#m4aa78f10e3" y="14.242737"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="font-family:TeX Gyre Pagella;font-size:10px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 40.359375, 17.872424)" x="40.359375" y="17.872424">B2</text>
+     </g>
+    </g>
+    <g id="text_13">
+     <text style="font-family:TeX Gyre Pagella;font-size:10px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-90, 14.459375, 32.148)" x="14.459375" y="32.148">syllable</text>
+    </g>
+   </g>
+   <g id="patch_15">
+    <path d="M 47.359375 57.096 
+L 47.359375 7.2 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 382.159375 57.096 
+L 382.159375 7.2 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 47.359375 57.096 
+L 382.159375 57.096 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 47.359375 7.2 
+L 382.159375 7.2 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
+   </g>
+   <g id="text_14">
+    <text style="font-family:TeX Gyre Pagella;font-size:10px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 309.597375, 52.278263)" x="309.597375" y="52.278263">431+10+20</text>
+   </g>
+   <g id="text_15">
+    <text style="font-family:TeX Gyre Pagella;font-size:10px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 98.115375, 40.341421)" x="98.115375" y="40.341421">52+10+20</text>
+   </g>
+   <g id="text_16">
+    <text style="font-family:TeX Gyre Pagella;font-size:10px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 121.551375, 28.404579)" x="121.551375" y="28.404579">94+10+20</text>
+   </g>
+   <g id="text_17">
+    <text style="font-family:TeX Gyre Pagella;font-size:10px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 213.063375, 16.467737)" x="213.063375" y="16.467737">258+10+20</text>
+   </g>
+   <g id="legend_1">
+    <g id="patch_19">
+     <path d="M 296.5625 45.357813 
+L 375.159375 45.357813 
+Q 377.159375 45.357813 377.159375 43.357813 
+L 377.159375 14.2 
+Q 377.159375 12.2 375.159375 12.2 
+L 296.5625 12.2 
+Q 294.5625 12.2 294.5625 14.2 
+L 294.5625 43.357813 
+Q 294.5625 45.357813 296.5625 45.357813 
+z
+" style="fill:#ffffff;opacity:0.8;stroke:#cccccc;stroke-linejoin:miter;"/>
+    </g>
+    <g id="patch_20">
+     <path d="M 298.5625 23.459375 
+L 318.5625 23.459375 
+L 318.5625 16.459375 
+L 298.5625 16.459375 
+z
+" style="fill:#c0c0c0;"/>
+    </g>
+    <g id="text_18">
+     <text style="font-family:TeX Gyre Pagella;font-size:10px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 326.5625, 23.459375)" x="326.5625" y="23.459375">Validation</text>
+    </g>
+    <g id="patch_21">
+     <path d="M 298.5625 38.528125 
+L 318.5625 38.528125 
+L 318.5625 31.528125 
+L 298.5625 31.528125 
+z
+"/>
+    </g>
+    <g id="text_19">
+     <text style="font-family:TeX Gyre Pagella;font-size:10px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 326.5625, 38.528125)" x="326.5625" y="38.528125">Testing</text>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p67daa78bc0">
+   <rect height="49.896" width="334.8" x="47.359375" y="7.2"/>
+  </clipPath>
+ </defs>
+</svg>

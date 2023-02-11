@@ -1,0 +1,67 @@
+\chapter{Dataset}
+\label{ch:dataset}
+We provide an overview of the data used and give a short statistical analysis.\\\\
+
+The dataset used in the experiments belongs to the Free University of Berlin and is kindly provided by A. A. Fernandez from the Natural History Museum of Berlin in cooperation with M. Knörnschild, affiliated with Natural History Museum of Berlin and Free University of Berlin. It consists of acoustic recordings of bat pup vocalizations from \emph{S. bilineata} in wav-file format. The acoustic recordings were obtained over two consecutive field seasons from two populations in Panama and Costa Rica.
+At each location, they were able to record the target pup in a distance of 2 to 4 meters with a high quality ultrasonic sound (\SI{500}{\kHz} sampling rate, 16-bit depth resolution). The set-up consisted of a microphone (Avisoft UltraSoundGate 116Hm, with condenser microphone CM16, frequency range 1-\SI{200}{\kHz} + 3dB) connected to a laptop (Lenovo S21e) running the software Avisoft RECORDER (v4.2.05 R. Specht, Avisoft Bioacoustics, Glienicke, Germany).
+The facts that the recordings could be conducted during daytime (i.e. most of the relevant social interactions of this species occur across the day in the dayroost) with excellent visibility during the day and that the bats clearly open their mouths when vocalising, allowed individual on-axis recordings.
+This, in combination with the directional characteristic of the microphone used and considering good recording conditions such as the avoidance of reverberation caused by foliage, enabled to obtain high quality recordings.
+
+The postprocessing and labeling of the syllables were conducted with the software Avisoft SASLab Pro (v.5.2.09; R. Specht, Avisoft Bioacoustics, Glienicke, Germany).
+Start and end of syllables were determined manually by researchers who have over 15 years of expertise in assigning different syllable types in the vocalizations of the focal bat species.
+Assigning syllable types manually is a common procedure; for instance, babbled utterances from children are coded by human listeners without a clustering method.
+As the pup syllable types show a high spectro-temporal similarity with adult syllable types from first appearance onwards, the entire adult vocal repertoire was used for visual classification of syllable types in babbling bouts.
+A subset of the visually classified syllables was statistically verified by performing discriminant function analyses (personal communication AA. Fernandez).
+
+\section{Simple call dataset}
+As the syllables are manually labeled we decided for economical reasons to restrict our analyses to the syllable types of a territorial song only.
+This song is composed of several syllable types of which the majority are acquired through vocal imitation by the pups \cite{Knornschild2010}. To be specific, they are B2, B3, B4 and VS as well as VSV. In addition, we included the relatively variable syllable type UPS.
+
+
+\begin{figure}[ht!]
+  \centering
+  \begin{tikzpicture}
+  \node (b2) {\includesvg[inkscapelatex=false, height=10em]{image/generated/syllable_b2.svg}};
+  \node[below=-.25 of b2] {\footnotesize B2};
+  \node[right=.5em of b2] (b3) {\includesvg[inkscapelatex=false, height=10em]{image/generated/syllable_b3.svg}};
+  \node[below=-.25 of b3] {\footnotesize B3};
+  \node[right=.5em of b3] (b4)  {\includesvg[inkscapelatex=false, height=10em]{image/generated/syllable_b4.svg}};
+  \node[below=-.25 of b4] {\footnotesize B4};
+  \node[right=.5em of b4] (vs)  {\includesvg[inkscapelatex=false, height=10em]{image/generated/syllable_vs.svg}};
+  \node[below=-.25 of vs] {\footnotesize VS};
+  \node[right=.5em of vs] (vsv)  {\includesvg[inkscapelatex=false, height=10em]{image/generated/syllable_vsv.svg}};
+  \node[below=-.25 of vsv] {\footnotesize VSV};
+  \node[right=.5em of vsv] (ups)  {\includesvg[inkscapelatex=false, height=10em]{image/generated/syllable_ups.svg}};
+  \node[below=-.25 of ups] {\footnotesize UPS};
+  \end{tikzpicture}
+  \caption{Spectrograms of all six syllables which were the target of our automated classification.}
+  \label{fig:syllables}
+\end{figure}
+
+\section{Descriptive statistics}\label{sec:dataset_descriptive_stats}
+Our restricted dataset consists of 1276 syllables. The k-fold \gls{cv} bins contain 11 syllables, because the smallest syllable type "B4" counts only 91 samples (see \figref{dataset_sct_variable_length}).
+For a brief analysis of the syllable duration, see \tabref{syllable_duration_stats}, the syllable length exhibits a high variability, with a ratio between the shortest and longest syllable of about 1:39.
+To account for the differences in the counts between the syllables classes one could consider to use data augmentation methods in the data pipeline. We decided to not apply any data augmentation, mainly as it is too complex to work on sound without extensive knowledge about it physical and biological aspects in respect to the bats.
+
+\begin{figure}[ht!]
+\centering
+  \includesvg[width=0.7\textwidth]{image/generated/dataset_sct_variable_length.svg}\hfill
+  \caption{The distribution of the syllables from the simple call data set. Over all syllables we used 11 samples for validation and 22 for testing. The dataset is not balanced in the number of training samples, with a ratio of about 1 : 7 between the least and most represented syllable.}
+  \label{fig:dataset_sct_variable_length}
+\end{figure}
+\begin{table}[ht!]
+\centering
+\input{table/generated/syllable_duration_stats}
+\caption{Descriptive statistics of the syllable durations in the simple call dataset.}
+\label{tab:syllable_duration_stats}
+\end{table}
+
+\section{Terminology of syllable}
+We follow the definition of previous bat and bird literature for defining a "syllable" as one continuous vocal emission surround by periods of silence \cite{Kanwal1994}, \cite{Behr2004}. They are the smallest independent acoustic units emitted from bats \cite{Behr2004}, \cite{Lattenkamp2019TheContext}.
+
+\section{Territorial Song}
+The territorial song (TS) is a multisyllabic vocalisation produced by all adult males to vocally defend their territories against potential intruders (\cite{Behr2009}). The territorial song encodes information about the males' quality, individual identity and social group membership (\cite{Behr2006}; \cite{Eckenweber2013}).
+
+It is hypothesized, that females include the evaluation of the territorial song into their mating decision. As the males produce this song mainly at dawn and dusk\cite{Eckenweber2013}, the females should hear them sufficiently. So far, however, this has not been proven.
+
+The TS is learned by the pups during their ontogeny through vocal imitation. This is achieved by the pups imitating the male tutors of their natal group \cite{Knornschild2010}. This is one of the main reasons for the continuing research interest in this song.

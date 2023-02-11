@@ -1,0 +1,236 @@
+%==============================================================================
+% ETHIDSC -- (ethidsc.sty) Style file
+% A LaTeX package providing new style definitions and commands.
+% The ethidsc-package defines a title page and an info page for term papers
+% and master theses written at the Measurement and Control Laboratory
+% of the Swiss Federal Institute of Technology (ETH) Zurich.
+% Author: Eric A. Mueller
+%         Measurement and Control Laboratory
+%         Swiss Federal Institute of Technology (ETH) Zurich
+%         Zurich, Switzerland
+%
+% Copyright (c) 2004 Eric A. Mueller
+% All rights reserved.
+%
+% ethidsc.sty,v.1.0 2009/29/05
+%
+% Revisions: 	2011/03/22  (Soren Ebbesen)
+%               2013/03/08  (Soren Ebbesen)
+%
+%==============================================================================
+\def\Presentation@Version{1.1}
+\NeedsTeXFormat{LaTeX2e}[1995/12/01]
+\ProvidesPackage{ethidsc}[2009/29/05, v. \Presentation@Version]
+
+\newif\ifingerman
+
+\DeclareOption{english}{\global\ingermanfalse}
+
+\DeclareOption{mt}{\gdef\@type{Master Thesis}}
+
+
+\ExecuteOptions{english,mt}
+\ProcessOptions
+
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{amsmath,amssymb,amsthm}
+\RequirePackage{graphicx}
+\RequirePackage[dvips]{epsfig} 
+\RequirePackage{float}
+\RequirePackage{fancyhdr}
+%\RequirePackage{hyperref}
+\RequirePackage{pstricks,pst-plot,psfrag}
+\RequirePackage{multirow}
+\RequirePackage{rotating}
+\RequirePackage{units}
+\RequirePackage{booktabs}
+\RequirePackage[dvipdfm]{geometry}
+\RequirePackage{url}
+
+
+\newcommand{\@supervision}{}
+\newcommand{\supervision}[1]{\gdef\@supervision{#1}}
+
+\newcommand{\@studentA}{}
+\newcommand{\studentA}[1]{\gdef\@studentA{#1}}
+
+\newcommand{\@emailA}{}
+\newcommand{\emailA}[1]{\gdef\@emailA{#1}}
+
+\newcommand{\@idnumber}{}
+\newcommand{\idnumber}[1]{\gdef\@idnumber{#1}}
+
+\newcommand{\@declaration}{}
+\newcommand{\declaration}{\gdef\@declaration{
+
+{\bf Statement regarding plagiarism: \\[1ex]}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+By signing this statement, I affirm that I have read and signed the Declaration of Originality,
+independently produced this paper, and adhered to the general practice of source
+citation in this subject-area.\\[3ex]
+% \fi
+Declaration of Originality:\\[1.5ex]
+\url{http://www.ethz.ch/faculty/exams/plagiarism/confirmation_en.pdf} 
+\\[6ex] 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Zurich, \the\day. \the\month. \the\year: \hrulefill
+\fi}}
+
+
+
+% Definition of title page______________________________________________________
+\renewcommand{\maketitle}{
+
+\pagestyle{empty}
+
+\begin{center}
+\hspace{0.02\textwidth}
+\parbox[c][\textheight][t]{0.97\textwidth}{
+\begin{center}
+
+\vspace*{-2cm}
+\begin{minipage}[c]{0.4\textwidth}
+ \begin{flushleft}
+ \hspace*{-1.5cm}
+
+ \end{flushleft}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.4\textwidth}
+ \begin{flushright}
+ \hspace*{0.4cm}
+
+ \end{flushright}
+\end{minipage}
+\vspace*{5.0cm}
+
+{\Huge \bf \@title \par}
+\vspace{2.5cm} 
+
+{\large \@type}\\
+{\large Faculty of Science, University of Bern}\\
+\vspace{1.5cm}
+{\large handed in by}\\
+\vspace{0.5cm}
+{\large \bf \@studentA}\\
+\vspace{2cm}
+{\large \bf \@date}\\
+
+\vspace{2cm}
+
+
+{\bf Supervisors} \\[1.5ex]
+\@supervision
+
+\end{center}
+}
+\end{center}
+\cleardoublepage
+}
+% %---------------------------------------------------------------
+% % Definition of disclosure page 
+% \newcommand{\disclosurepage}{
+% \AtEndDocument{
+
+% \pagestyle{empty}
+% \cleardoublepage
+% \setlength{\oddsidemargin}{4cm}
+% \setlength{\parindent}{0em}
+
+% \vspace*{-2.5cm}
+% \hspace{-0.254cm}
+% \vspace{1.5cm}
+
+
+% {\bf Disclosure \\[1ex]}
+% Parts of this thesis are included in a paper entitled as "Classification of Intestinal Gland Cell-Graphs using Graph Neural Networks" and under consideration for the ICPR meeting, January 2021.
+
+% \vspace{1cm}
+
+% % \if\@declaration \else \@declaration \fi
+
+% \normalsize 
+% }
+% }
+
+
+% Definition of info page (last page)___________________________________________
+\newcommand{\infopage}{
+\AtEndDocument{
+% \cleardoublepage
+\clearpage
+\pagestyle{empty}
+
+\setlength{\oddsidemargin}{3cm}
+\setlength{\parindent}{0em}
+
+\vspace*{-2cm}
+\hspace{-0.354cm}
+\vspace{1.5cm}
+
+
+{\bf Title of work: \\[1ex]}
+{\LARGE \@title \\[1ex] \par}
+
+{\bf Thesis type and date: \\[1ex]}
+\@type, \@date\\[2.5ex]
+
+{\bf Supervision: \\[1ex]}
+\@supervision
+\vspace{1cm}
+
+{\bf Student:}
+
+\begin{tabbing}
+\hspace*{3cm}  \= \kill
+Name: \> \@studentA \\
+E-mail: \> \@emailA \\
+Legi-Nr.: \> \@idnumber \\
+\end{tabbing}
+
+
+\vspace{1cm}
+
+% \if\@declaration \else \@declaration \fi
+
+\normalsize 
+}
+}
+
+% =======================================
+%	\usepackage[dvipdfm]{geometry}
+	\setlength\paperheight {297mm}%
+	\setlength\paperwidth  {210mm}%
+
+	%PAGE LAYOUT 2cm margin on all four sides
+	\setlength{\voffset}{-2.54cm}
+	\setlength{\hoffset}{-2.54cm}
+% 	\setlength{\voffset}{-2.5cm}
+% 	\setlength{\hoffset}{-2.5cm}
+
+	\setlength{\oddsidemargin}{3.5cm} %2.5 damit der Abstand auf beiden Seiten gleich ist 3.5
+	\setlength{\evensidemargin}{2.5cm} %2.5 damit der Abstand auf beiden Seiten gleich ist 3.5
+
+	\setlength{\topmargin}{2.5cm} % -1in subtract latex default margin (1 inch) from topmargin
+
+%	\setlength{\headheight}{14.mm} %platz für kopfzeile
+%	\setlength{\headsep}{+11.mm} %freiraum nach kopfzeile
+%	\addtolength{\topmargin}{0.0mm} %rest, damit die geforderten 2.5 cm erfüllt werden
+
+	\setlength{\textheight}{222mm} %247mm 29.7cm-5cm = 24.7cm
+%	\setlength{\footskip}{+20mm}
+
+	\setlength{\textwidth}{150mm} %!!! %21cm - 5cm = 16cm
+
+
+%	\addtolength{\oddsidemargin}{-1in} %subtract latex default margin (1 inch) from oddsidemargin
+	
+
+%	\addtolength{\evensidemargin}{-1in}  %subtract latex default margin (1 inch) from evensidemargin
+%	\setlength{\marginparwidth}{10cm}
+	\setlength{\parindent}{0pt}
+
+% Revision history___________________________________________________________ 
+% 2009/29/05 Adapted from ethimrt.sty,v 1.1 2004/04/02

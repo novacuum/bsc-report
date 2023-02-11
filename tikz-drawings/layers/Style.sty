@@ -1,0 +1,12 @@
+\tikzstyle{fillwhite} = [fill=white,inner sep=0pt, opacity=1]
+\tikzstyle{connection}=[ultra thick,every node/.style={sloped,allow upside down},draw=\edgecolor,opacity=0.7]
+\tikzstyle{fuseconnection}=[ultra thick,every node/.style={sloped,allow upside down}, draw=orange, decorate,
+    decoration={markings, mark connection node=my node,
+        mark=at position .8 with {
+            \node [draw, fill=orange, rectangle, minimum height = 4mm, minimum width=1mm,
+            transform shape, inner sep=0pt] (my node) {};
+        }
+    }, opacity=0.7]
+\tikzstyle{copyconnection}=[ultra thick,every node/.style={sloped,allow upside down},draw={rgb:blue,4;red,1;green,1;black,3},opacity=0.7]
+
+

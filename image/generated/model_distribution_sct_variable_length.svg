@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with matplotlib (https://matplotlib.org/) -->
+<svg height="489.077812pt" version="1.1" viewBox="0 0 249.05 489.077812" width="249.05pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <metadata>
+  <rdf:RDF xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2021-02-18T11:38:35.558153</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.3.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linecap:butt;stroke-linejoin:round;}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 489.077812 
+L 249.05 489.077812 
+L 249.05 0 
+L 0 0 
+z
+" style="fill:#ffffff;"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 45.76875 450.72 
+L 171.31875 450.72 
+L 171.31875 7.2 
+L 45.76875 7.2 
+z
+" style="fill:#ffffff;"/>
+   </g>
+   <g id="PathCollection_1">
+    <path clip-path="url(#pcfa20c2c21)" d="M 47.940034 36.81 
+L 55.011102 36.81 
+M 51.475568 40.345534 
+L 51.475568 33.274466 
+" style="fill:#21918c;stroke:#21918c;stroke-width:1.5;"/>
+    <path clip-path="url(#pcfa20c2c21)" d="M 49.2395 62.01 
+L 53.711636 62.01 
+M 51.475568 64.246068 
+L 51.475568 59.773932 
+" style="fill:#fde725;stroke:#fde725;stroke-width:1.5;"/>
+    <path clip-path="url(#pcfa20c2c21)" d="M 105.008216 55.71 
+L 112.079284 55.71 
+M 108.54375 59.245534 
+L 108.54375 52.174466 
+" style="fill:#21918c;stroke:#21918c;stroke-width:1.5;"/>
+    <path clip-path="url(#pcfa20c2c21)" d="M 106.307682 27.36 
+L 110.779818 27.36 
+M 108.54375 29.596068 
+L 108.54375 25.123932 
+" style="fill:#fde725;stroke:#fde725;stroke-width:1.5;"/>
+    <path clip-path="url(#pcfa20c2c21)" d="M 162.076398 30.51 
+L 169.147466 30.51 
+M 165.611932 34.045534 
+L 165.611932 26.974466 
+" style="fill:#21918c;stroke:#21918c;stroke-width:1.5;"/>
+    <path clip-path="url(#pcfa20c2c21)" d="M 163.375864 38.385 
+L 167.848 38.385 
+M 165.611932 40.621068 
+L 165.611932 36.148932 
+" style="fill:#fde725;stroke:#fde725;stroke-width:1.5;"/>
+   </g>
+   <g id="PathCollection_2">
+    <path clip-path="url(#pcfa20c2c21)" d="M 51.475568 421.495534 
+C 52.413203 421.495534 53.31256 421.123008 53.975568 420.46 
+C 54.638576 419.796992 55.011102 418.897635 55.011102 417.96 
+C 55.011102 417.022365 54.638576 416.123008 53.975568 415.46 
+C 53.31256 414.796992 52.413203 414.424466 51.475568 414.424466 
+C 50.537934 414.424466 49.638576 414.796992 48.975568 415.46 
+C 48.31256 416.123008 47.940034 417.022365 47.940034 417.96 
+C 47.940034 418.897635 48.31256 419.796992 48.975568 420.46 
+C 49.638576 421.123008 50.537934 421.495534 51.475568 421.495534 
+z
+" style="fill:#21918c;stroke:#21918c;"/>
+    <path clip-path="url(#pcfa20c2c21)" d="M 51.475568 387.121068 
+C 52.06858 387.121068 52.637384 386.885462 53.056707 386.466139 
+C 53.47603 386.046816 53.711636 385.478012 53.711636 384.885 
+C 53.711636 384.291988 53.47603 383.723184 53.056707 383.303861 
+C 52.637384 382.884538 52.06858 382.648932 51.475568 382.648932 
+C 50.882556 382.648932 50.313752 382.884538 49.894429 383.303861 
+C 49.475106 383.723184 49.2395 384.291988 49.2395 384.885 
+C 49.2395 385.478012 49.475106 386.046816 49.894429 386.466139 
+C 50.313752 386.885462 50.882556 387.121068 51.475568 387.121068 
+z
+" style="fill:#fde725;stroke:#fde725;"/>
+    <path clip-path="url(#pcfa20c2c21)" d="M 51.475568 332.916139 
+C 51.894891 332.916139 52.297096 332.74954 52.593602 332.453034 
+C 52.890108 332.156528 53.056707 331.754323 53.056707 331.335 
+C 53.056707 330.915677 52.890108 330.513472 52.593602 330.216966 
+C 52.297096 329.92046 51.894891 329.753861 51.475568 329.753861 
+C 51.056245 329.753861 50.65404 329.92046 50.357534 330.216966 
+C 50.061028 330.513472 49.894429 330.915677 49.894429 331.335 
+C 49.894429 331.754323 50.061028 332.156528 50.357534 332.453034 
+C 50.65404 332.74954 51.056245 332.916139 51.475568 332.916139 
+z
+" style="fill:#440154;stroke:#440154;"/>
+    <path clip-path="url(#pcfa20c2c21)" d="M 108.54375 397.870534 
+C 109.481385 397.870534 110.380742 397.498008 111.04375 396.835 
+C 111.706758 396.171992 112.079284 395.272635 112.079284 394.335 
+C 112.079284 393.397365 111.706758 392.498008 111.04375 391.835 
+C 110.380742 391.171992 109.481385 390.799466 108.54375 390.799466 
+C 107.606115 390.799466 106.706758 391.171992 106.04375 391.835 
+C 105.380742 392.498008 105.008216 393.397365 105.008216 394.335 
+C 105.008216 395.272635 105.380742 396.171992 106.04375 396.835 
+C 106.706758 397.498008 107.606115 397.870534 108.54375 397.870534 
+z
+" style="fill:#21918c;stroke:#21918c;"/>
+    <path clip-path="url(#pcfa20c2c21)" d="M 108.54375 363.496068 
+C 109.136762 363.496068 109.705566 363.260462 110.124889 362.841139 
+C 110.544212 362.421816 110.779818 361.853012 110.779818 361.26 
+C 110.779818 360.666988 110.544212 360.098184 110.124889 359.678861 
+C 109.705566 359.259538 109.136762 359.023932 108.54375 359.023932 
+C 107.950738 359.023932 107.381934 359.259538 106.962611 359.678861 
+C 106.543288 360.098184 106.307682 360.666988 106.307682 361.26 
+C 106.307682 361.853012 106.543288 362.421816 106.962611 362.841139 
+C 107.381934 363.260462 107.950738 363.496068 108.54375 363.496068 
+z
+" style="fill:#fde725;stroke:#fde725;"/>
+    <path clip-path="url(#pcfa20c2c21)" d="M 165.611932 434.095534 
+C 166.549566 434.095534 167.448924 433.723008 168.111932 433.06 
+C 168.77494 432.396992 169.147466 431.497635 169.147466 430.56 
+C 169.147466 429.622365 168.77494 428.723008 168.111932 428.06 
+C 167.448924 427.396992 166.549566 427.024466 165.611932 427.024466 
+C 164.674297 427.024466 163.77494 427.396992 163.111932 428.06 
+C 162.448924 428.723008 162.076398 429.622365 162.076398 430.56 
+C 162.076398 431.497635 162.448924 432.396992 163.111932 433.06 
+C 163.77494 433.723008 164.674297 434.095534 165.611932 434.095534 
+z
+" style="fill:#21918c;stroke:#21918c;"/>
+    <path clip-path="url(#pcfa20c2c21)" d="M 165.611932 424.921068 
+C 166.204944 424.921068 166.773748 424.685462 167.193071 424.266139 
+C 167.612394 423.846816 167.848 423.278012 167.848 422.685 
+C 167.848 422.091988 167.612394 421.523184 167.193071 421.103861 
+C 166.773748 420.684538 166.204944 420.448932 165.611932 420.448932 
+C 165.01892 420.448932 164.450116 420.684538 164.030793 421.103861 
+C 163.61147 421.523184 163.375864 422.091988 163.375864 422.685 
+C 163.375864 423.278012 163.61147 423.846816 164.030793 424.266139 
+C 164.450116 424.685462 165.01892 424.921068 165.611932 424.921068 
+z
+" style="fill:#fde725;stroke:#fde725;"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path d="M 0 0 
+L 0 3.5 
+" id="m7be3a1a62f" style="stroke:#000000;stroke-width:0.8;"/>
+      </defs>
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="51.475568" xlink:href="#m7be3a1a62f" y="450.72"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-family:TeX Gyre Pagella;font-size:10px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 51.475568, 464.979375)" x="51.475568" y="464.979375">256</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="108.54375" xlink:href="#m7be3a1a62f" y="450.72"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-family:TeX Gyre Pagella;font-size:10px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 108.54375, 464.979375)" x="108.54375" y="464.979375">300</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="165.611932" xlink:href="#m7be3a1a62f" y="450.72"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-family:TeX Gyre Pagella;font-size:10px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 165.611932, 464.979375)" x="165.611932" y="464.979375">512</text>
+     </g>
+    </g>
+    <g id="text_4">
+     <text style="font-family:TeX Gyre Pagella;font-size:10px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 108.54375, 479.048125)" x="108.54375" y="479.048125">Spectrogram height</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_4">
+      <defs>
+       <path d="M 0 0 
+L -3.5 0 
+" id="mef3faa4de4" style="stroke:#000000;stroke-width:0.8;"/>
+      </defs>
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="45.76875" xlink:href="#mef3faa4de4" y="422.055"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-family:TeX Gyre Pagella;font-size:10px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 38.76875, 425.684687)" x="38.76875" y="425.684687">0.65</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_5">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="45.76875" xlink:href="#mef3faa4de4" y="338.895"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-family:TeX Gyre Pagella;font-size:10px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 38.76875, 342.524687)" x="38.76875" y="342.524687">0.70</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_6">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="45.76875" xlink:href="#mef3faa4de4" y="255.735"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-family:TeX Gyre Pagella;font-size:10px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 38.76875, 259.364687)" x="38.76875" y="259.364687">0.75</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_7">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="45.76875" xlink:href="#mef3faa4de4" y="172.575"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-family:TeX Gyre Pagella;font-size:10px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 38.76875, 176.204687)" x="38.76875" y="176.204687">0.80</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_8">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="45.76875" xlink:href="#mef3faa4de4" y="89.415"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-family:TeX Gyre Pagella;font-size:10px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 38.76875, 93.044687)" x="38.76875" y="93.044687">0.85</text>
+     </g>
+    </g>
+    <g id="text_10">
+     <text style="font-family:TeX Gyre Pagella;font-size:10px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-90, 14.439063, 228.96)" x="14.439063" y="228.96">Test accuracy</text>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 45.76875 450.72 
+L 45.76875 7.2 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 171.31875 450.72 
+L 171.31875 7.2 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 45.76875 450.72 
+L 171.31875 450.72 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 45.76875 7.2 
+L 171.31875 7.2 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
+   </g>
+   <g id="legend_1">
+    <g id="patch_7">
+     <path d="M 178.31875 113.08 
+L 239.85 113.08 
+Q 241.85 113.08 241.85 111.08 
+L 241.85 51.805 
+Q 241.85 49.805 239.85 49.805 
+L 178.31875 49.805 
+Q 176.31875 49.805 176.31875 51.805 
+L 176.31875 111.08 
+Q 176.31875 113.08 178.31875 113.08 
+z
+" style="fill:#ffffff;opacity:0.8;stroke:#cccccc;stroke-linejoin:miter;"/>
+    </g>
+    <g id="text_11">
+     <text style="font-family:TeX Gyre Pagella;font-size:10px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 180.31875, 61.064375)" x="180.31875" y="61.064375">Pixel per sec.</text>
+    </g>
+    <g id="line2d_9"/>
+    <g id="line2d_10">
+     <defs>
+      <path d="M 0 0 
+L 3 0 
+L 3 -3 
+L 0 -3 
+z
+" id="m5fd59ca2ef" style="stroke:#440154;"/>
+     </defs>
+     <g>
+      <use style="fill:#440154;stroke:#440154;" x="195.084375" xlink:href="#m5fd59ca2ef" y="72.633125"/>
+     </g>
+    </g>
+    <g id="text_12">
+     <text style="font-family:TeX Gyre Pagella;font-size:10px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 213.084375, 76.133125)" x="213.084375" y="76.133125">2000</text>
+    </g>
+    <g id="line2d_11"/>
+    <g id="line2d_12">
+     <defs>
+      <path d="M 0 0 
+L 3 0 
+L 3 -3 
+L 0 -3 
+z
+" id="md31e02dac2" style="stroke:#21918c;"/>
+     </defs>
+     <g>
+      <use style="fill:#21918c;stroke:#21918c;" x="195.084375" xlink:href="#md31e02dac2" y="87.701875"/>
+     </g>
+    </g>
+    <g id="text_13">
+     <text style="font-family:TeX Gyre Pagella;font-size:10px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 213.084375, 91.201875)" x="213.084375" y="91.201875">5000</text>
+    </g>
+    <g id="line2d_13"/>
+    <g id="line2d_14">
+     <defs>
+      <path d="M 0 0 
+L 3 0 
+L 3 -3 
+L 0 -3 
+z
+" id="m00e407bbb2" style="stroke:#fde725;"/>
+     </defs>
+     <g>
+      <use style="fill:#fde725;stroke:#fde725;" x="195.084375" xlink:href="#m00e407bbb2" y="102.770625"/>
+     </g>
+    </g>
+    <g id="text_14">
+     <text style="font-family:TeX Gyre Pagella;font-size:10px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 213.084375, 106.270625)" x="213.084375" y="106.270625">4000</text>
+    </g>
+   </g>
+   <g id="legend_2">
+    <g id="patch_8">
+     <path d="M 178.31875 186.355 
+L 239.85 186.355 
+Q 241.85 186.355 241.85 184.355 
+L 241.85 125.08 
+Q 241.85 123.08 239.85 123.08 
+L 178.31875 123.08 
+Q 176.31875 123.08 176.31875 125.08 
+L 176.31875 184.355 
+Q 176.31875 186.355 178.31875 186.355 
+z
+" style="fill:#ffffff;opacity:0.8;stroke:#cccccc;stroke-linejoin:miter;"/>
+    </g>
+    <g id="text_15">
+     <text style="font-family:TeX Gyre Pagella;font-size:10px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 180.31875, 134.339375)" x="180.31875" y="134.339375">Pixel per sec.</text>
+    </g>
+    <g id="line2d_15"/>
+    <g id="line2d_16">
+     <defs>
+      <path d="M 0 0 
+L 1.581139 0 
+L 1.581139 -1.581139 
+L 0 -1.581139 
+z
+" id="m0c56781cdd" style="stroke:#000000;"/>
+     </defs>
+     <g>
+      <use style="stroke:#000000;" x="195.084375" xlink:href="#m0c56781cdd" y="145.908125"/>
+     </g>
+    </g>
+    <g id="text_16">
+     <text style="font-family:TeX Gyre Pagella;font-size:10px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 213.084375, 149.408125)" x="213.084375" y="149.408125">2000</text>
+    </g>
+    <g id="line2d_17"/>
+    <g id="line2d_18">
+     <defs>
+      <path d="M 0 0 
+L 2.236068 0 
+L 2.236068 -2.236068 
+L 0 -2.236068 
+z
+" id="me33a63ce8d" style="stroke:#000000;"/>
+     </defs>
+     <g>
+      <use style="stroke:#000000;" x="195.084375" xlink:href="#me33a63ce8d" y="160.976875"/>
+     </g>
+    </g>
+    <g id="text_17">
+     <text style="font-family:TeX Gyre Pagella;font-size:10px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 213.084375, 164.476875)" x="213.084375" y="164.476875">4000</text>
+    </g>
+    <g id="line2d_19"/>
+    <g id="line2d_20">
+     <defs>
+      <path d="M 0 0 
+L 3.535534 0 
+L 3.535534 -3.535534 
+L 0 -3.535534 
+z
+" id="m55afaecd33" style="stroke:#000000;"/>
+     </defs>
+     <g>
+      <use style="stroke:#000000;" x="195.084375" xlink:href="#m55afaecd33" y="176.045625"/>
+     </g>
+    </g>
+    <g id="text_18">
+     <text style="font-family:TeX Gyre Pagella;font-size:10px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 213.084375, 179.545625)" x="213.084375" y="179.545625">5000</text>
+    </g>
+   </g>
+   <g id="legend_3">
+    <g id="patch_9">
+     <path d="M 178.31875 45.357812 
+L 227.609375 45.357812 
+Q 229.609375 45.357812 229.609375 43.357812 
+L 229.609375 14.2 
+Q 229.609375 12.2 227.609375 12.2 
+L 178.31875 12.2 
+Q 176.31875 12.2 176.31875 14.2 
+L 176.31875 43.357812 
+Q 176.31875 45.357812 178.31875 45.357812 
+z
+" style="fill:#ffffff;opacity:0.8;stroke:#cccccc;stroke-linejoin:miter;"/>
+    </g>
+    <g id="PathCollection_3">
+     <defs>
+      <path d="M -2.95804 0 
+L 2.95804 0 
+M 0 2.95804 
+L 0 -2.95804 
+" id="mc090adeea3" style="stroke:#000000;stroke-width:1.5;"/>
+     </defs>
+     <g>
+      <use style="stroke:#000000;stroke-width:1.5;" x="190.31875" xlink:href="#mc090adeea3" y="20.834375"/>
+     </g>
+    </g>
+    <g id="text_19">
+     <text style="font-family:TeX Gyre Pagella;font-size:10px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 208.31875, 23.459375)" x="208.31875" y="23.459375">hog</text>
+    </g>
+    <g id="PathCollection_4">
+     <defs>
+      <path d="M 0 2.738613 
+C 0.726289 2.738613 1.422928 2.450055 1.936492 1.936492 
+C 2.450055 1.422928 2.738613 0.726289 2.738613 0 
+C 2.738613 -0.726289 2.450055 -1.422928 1.936492 -1.936492 
+C 1.422928 -2.450055 0.726289 -2.738613 0 -2.738613 
+C -0.726289 -2.738613 -1.422928 -2.450055 -1.936492 -1.936492 
+C -2.450055 -1.422928 -2.738613 -0.726289 -2.738613 0 
+C -2.738613 0.726289 -2.450055 1.422928 -1.936492 1.936492 
+C -1.422928 2.450055 -0.726289 2.738613 0 2.738613 
+z
+" id="mde42af7260" style="stroke:#000000;"/>
+     </defs>
+     <g>
+      <use style="stroke:#000000;" x="190.31875" xlink:href="#mde42af7260" y="35.923437"/>
+     </g>
+    </g>
+    <g id="text_20">
+     <text style="font-family:TeX Gyre Pagella;font-size:10px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 208.31875, 38.548437)" x="208.31875" y="38.548437">raw</text>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pcfa20c2c21">
+   <rect height="443.52" width="125.55" x="45.76875" y="7.2"/>
+  </clipPath>
+ </defs>
+</svg>

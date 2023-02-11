@@ -1,0 +1,24 @@
+\begin{tabular}{l
+S[table-format=2.1]@{\,\( \pm \)\,}
+S[table-format=1.1, table-number-alignment = left]
+S[table-format=2.2]@{\,\( \pm \)\,}
+S[table-format=1.2]
+S[table-format=2.1]@{\,\( \pm \)\,}
+S[table-format=1.1, table-number-alignment = left]
+S[table-format=2.2]@{\,\( \pm \)\,}
+S[table-format=1.2]
+}
+\toprule
+                                                                            Model & \multicolumn{4}{l}{Validate} & \multicolumn{4}{l}{Test} \\
+                                                                                  & \multicolumn{2}{l}{Accuracy (\si{\percent})} & \multicolumn{2}{l}{Loss} & \multicolumn{2}{l}{Accuracy (\si{\percent})} & \multicolumn{2}{l}{Loss} \\
+
+\midrule
+           \cite{nn_lstm_scs_all_hog_200} LSTM, stride: 0.05, \gls{mcl}: 0.1, raw &                     77.5 & 3.2 &     4.66 & 1.47 &                     71.3 & 1.5 &     1.14 & 0.21 \\
+       \cite{nn_cnn_2d_scs_all_raw_200} CNN 2D, stride: 0.05, \gls{mcl}: 0.1, raw &                     73.0 & 4.5 &     4.94 & 1.88 &                     69.8 & 3.1 &     0.99 & 0.21 \\
+       \cite{nn_cnn_1d_scs_all_raw_200} CNN 1D, stride: 0.05, \gls{mcl}: 0.1, raw &                     73.2 & 2.6 &     5.94 & 1.68 &                     68.6 & 4.3 &     1.29 & 0.52 \\
+       \cite{nn_cnn_2d_scs_all_hog_200} CNN 2D, stride: 0.05, \gls{mcl}: 0.1, raw &                     69.4 & 4.0 &     5.06 & 0.68 &                     63.9 & 3.4 &     1.07 & 0.11 \\
+       \cite{nn_cnn_1d_scs_all_hog_200} CNN 1D, stride: 0.05, \gls{mcl}: 0.1, raw &                     68.7 & 3.9 &     4.28 & 1.22 &                     63.5 & 1.6 &     1.05 & 0.16 \\
+ \cite{nn_cnn_2d_scs_all_hog_200_3d} CNN 2D, stride: 0.05, \gls{mcl}: 0.1, raw 3D &                     59.0 & 4.3 &     4.88 & 0.66 &                     55.3 & 2.4 &     1.15 & 0.12 \\
+           \cite{nn_lstm_scs_all_raw_200} LSTM, stride: 0.05, \gls{mcl}: 0.1, raw &                     59.0 & 2.7 &     9.18 & 3.47 &                     52.5 & 3.1 &     1.89 & 0.51 \\
+\bottomrule
+\end{tabular}

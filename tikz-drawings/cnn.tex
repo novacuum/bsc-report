@@ -1,0 +1,191 @@
+\documentclass[border=15pt, multi, tikz]{standalone}
+\input{preamble}
+
+
+\def\poolsep{1}
+\def\modelscale{1}
+\def\modelcalcscale{0.15}
+\newcommand{\poolsize}[1]{(#1-2)*\modelcalcscale}
+
+\begin{document}
+\begin{tikzpicture}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Draw Layer Blocks
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+% input
+\node[canvas is zy plane at x=1] (image0) at (-3,0,0) {\includegraphics[width=400pt, height=256pt]{\input_image}};
+
+% conv pool 1
+\pic[shift={(2, 0, 0)}, ] at (image0)
+    {RightBandedBox={
+        name=conv1, xlabel={(32,)}, ylabel=256, zlabel=400,
+        fill=\ConvColor, bandfill=\ConvReluColor,
+        width={32*\modelcalcscale}, height=256*\modelcalcscale, depth=400*\modelcalcscale,
+        prevpos=image0
+    }};
+
+\pic[shift={(0, 0, 0)}] at (conv1-east)
+    {Box={
+        name=pool1,
+        fill=\PoolColor, opacity=0.5,
+        width=1*\modelcalcscale, height=\poolsize{256}, depth=\poolsize{400}
+    }};
+    
+% conv pool 2
+\pic[shift={(2, 0, 0)}, ] at (pool1-east)
+    {RightBandedBox={
+        name=conv2, xlabel={(64,)}, ylabel=127, zlabel=199,
+        fill=\ConvColor, bandfill=\ConvReluColor,
+        width={64*\modelcalcscale}, height=127*\modelcalcscale, depth=199*\modelcalcscale,
+        prevpos=pool1-east
+    }};
+
+\pic[shift={(0, 0, 0)}] at (conv2-east)
+    {Box={
+        name=pool2,
+        fill=\PoolColor, opacity=0.5,
+        width=1*\modelcalcscale, height=\poolsize{127}, depth=\poolsize{199}
+    }};
+
+% conv pool 3
+\pic[shift={(1, 0, 0)}, ] at (pool2-east)
+    {RightBandedBox={
+        name=conv3, xlabel={(64,)}, ylabel=62, zlabel=98,
+        fill=\ConvColor, bandfill=\ConvReluColor,
+        width={64*\modelcalcscale}, height=62*\modelcalcscale, depth=98*\modelcalcscale,
+        prevpos=pool2-east
+    }};
+
+\pic[shift={(0, 0, 0)}] at (conv3-east)
+    {Box={
+        name=pool3,
+        fill=\PoolColor, opacity=0.5,
+        width=1*\modelcalcscale, height=\poolsize{62}, depth=\poolsize{98}
+    }};
+
+% conv pool 4
+\pic[shift={(1, 0, 0)}, ] at (pool3-east)
+    {RightBandedBox={
+        name=conv4, xlabel={(128,)}, ylabel=30, zlabel=48,
+        fill=\ConvColor, bandfill=\ConvReluColor,
+        width={128*\modelcalcscale}, height=30*\modelcalcscale, depth=48*\modelcalcscale,
+        prevpos=pool3-east
+    }};
+
+\pic[shift={(0, 0, 0)}] at (conv4-east)
+    {Box={
+        name=pool4,
+        fill=\PoolColor, opacity=0.5, 
+        width=1*\modelcalcscale, height=\poolsize{30}, depth=\poolsize{48}
+    }};
+
+% conv pool 5
+\pic[shift={(1, 0, 0)}, ] at (pool4-east)
+    {RightBandedBox={
+        name=conv5, xlabel={(128,)}, ylabel=14, zlabel=48,
+        fill=\ConvColor, bandfill=\ConvReluColor,
+        height=14*\modelcalcscale, depth=23*\modelcalcscale, width={256*\modelcalcscale},
+        prevpos=pool4-east
+    }};
+
+\pic[shift={(0, 0, 0)}] at (conv5-east)
+    {Box={
+        name=pool5,
+        fill=\PoolColor, opacity=0.5, 
+        height=\poolsize{14}, depth=\poolsize{23}, width=1*\modelcalcscale
+    }};
+
+% dense 1
+\pic[shift={(1.5,0,0)}] at (pool5-east) 
+{Box={
+	name=dense1,
+	caption=relu,
+	zlabel=1024,
+	fill=\PoolColor,
+	height=1*\modelcalcscale, width=1*\modelcalcscale, depth=102*\modelcalcscale
+	}
+};
+
+
+% dense 2
+\pic[shift={(1.5,0,0)}] at (dense1-east) 
+{Box={
+	name=dense2,
+	caption=softmax,
+	zlabel=6,
+	fill=\SoftmaxColor,
+	height=1*\modelcalcscale, width=1*\modelcalcscale, depth=6
+	}
+};
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Draw connections
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% connections
+% \draw [connection]  (image0)        -- 	node {\midarrow} 	(conv1-west);
+% \draw [connection]  (pool1-east)	-- 	node {\midarrow} 	(conv2-west);
+% \draw [connection]  (pool2-east)	-- 	node {\midarrow} 	(conv3-west);
+% \draw [connection]  (pool3-east)	-- 	node {\midarrow} 	(conv4-west);
+% \draw [connection]  (pool4-east)	-- 	node {\midarrow} 	(conv5-west);
+
+
+
+
+% pool & fullconnection
+\draw	[densely dashed]  (pool5-nearnortheast)    	--  									(dense1-nearnorthwest);
+\draw	[densely dashed]  (pool5-nearsoutheast)    	--  									(dense1-nearsouthwest);
+\draw	[densely dashed]  (pool5-farnortheast)    	--  									(dense1-farnorthwest);
+\draw	[densely dashed]  (pool5-farsoutheast)    	--  									(dense1-farsouthwest);
+
+\draw	[densely dashed]  (dense1-nearnortheast)    	--  									(dense2-nearnorthwest);
+\draw	[densely dashed]  (dense1-farnortheast)    	--  									(dense2-farnorthwest);
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Draw Legend
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pic[shift={(8, 0, 0)}] at (conv1-south)
+    {RightBandedBox={
+        name=legend_1,
+        fill=\ConvColor,
+        bandfill=\ConvReluColor,
+        height=5.0,
+        depth=5.0,
+        width={2.0}
+    }
+};
+\node [shift={(0, -1.3, 0)}] at (legend_1-anchor) {\LARGE{Convolution layer}};
+
+\pic[shift={(5, 0, 0)}] at (legend_1-west)
+{Box={
+        name=legend_2,
+        fill=\PoolColor,
+        height=5.0,
+        depth=5.0,
+        width={0.5}
+    }
+};
+\node [shift={(0, -1.3, 0)}] at (legend_2-anchor) {\LARGE{Pooling layer}};
+
+\pic[shift={(5, 0, 0)}] at (legend_2-west)
+{Box={
+        name=legend_3,
+        fill=\PoolColor,
+        height=0.5,
+        depth=10,
+        width={0.5}
+    }
+};
+\node [shift={(0, -1.3, 0)}] at (legend_3-anchor) {\LARGE{Dense layer}};
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{tikzpicture}
+\end{document}\grid

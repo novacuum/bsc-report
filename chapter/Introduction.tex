@@ -1,0 +1,28 @@
+\chapter{Introduction}
+\label{ch:introduction}
+A promising approach to deepen our knowledge about human language capacity is to investigate if and to what extent key components - such as vocal imitation - have evolved in other species \cite{Vernes2020}. 
+These studies yield a large amount of data and the analysis of this data is time-consuming if vocalisations cannot be detected automatically. Furthermore, with complex vocal sequences consisting of several different syllable types, automatic classification of syllable types is a desirable feature.
+The neotropical greatersac-winged bat species \emph{Saccopteryx bilineata} is a promising candidate for biolinguistic studies, as this species is capable of vocal imitation \cite{Knornschild2014}. 
+As the study of this specific trait in \emph{S. bilineata} progresses, an increasing amount of research is devoted to the manual analysis of large amounts of bioacoustic data. More about the difficulty of manual analysis of bioacoustic data, especially syllable classification, can be found in \secref{vocalisation} and \secref{syllable_classification}.
+
+For human speech, the understanding, parsing and encoding process is a highly studied procedure and is now used by a wide range of applications belonging to the broad field of \gls{nlp}.
+Developments in this field have made it possible to convert speech directly into written form or translate it into another language in real time and many other astonishing feats \cite{Kang2020NaturalReview}. A big step for this language application came in the form of \gls{dl}, a subdivision of \gls{ml}, which emerged as a promising field.
+\Gls{dl} involves the processes of "learning" information and then applying that learnt information to perform similar tasks by training deep and complex models.
+
+% Deep learning is a subdivision of Machine Learning featuring accessible techniques for complex tasks.
+\Gls{dl} tools have already been used in the field of bioacoustics. One of these applications is species identification, which uses the initial approaches of human speech decoding applications based on \gls{ml} by searching and classifying patterns in the acoustic recordings and trying to combine the results to meaningful information \cite{Stowell2019}.
+Depending on the animal monitored, one was interested in the recognition of a song or only a single syllable, with the interest of distinguishing between animals.
+In recent years, the number of biolinguistic studies in animals has continued to increase \cite{Vernes2020,Wirthlin2019ATrait}.
+Especially in animals that are thought to be able to contribute to the study of human speech, such as the bat \emph{S. bilineata}, which comprises a promising taxon for biolinguistic studies \cite{Knornschild2014}.
+This, combined with the ongoing development of computational power leveraging the analysis of more information \cite{Amodei2019}, makes the interest in applying \gls{nlp} to biolinguistics increasingly promising.
+However, at the time of writing, this area appears to be largely unexplored, and no evidence of software for fully automated classification of bat syllable types has been found.
+
+
+This project aims to deepen the understanding of syllable type classification of the \emph{S. bilineata} using supervised \gls{ml} on the basis of the initial \gls{dl} models used for species identification.
+%This project aims to build a \gls{ml} pipeline for automated syllable type classification on the basis of the initial \gls{dl} models used for species identification.
+The experiments are divided into two parts. In the first we focus on different feature preparation methods as well as insights about the performance of different \gls{ml} models.
+The second part focuses on the building of a pipeline for an automated syllable type classifier prototype based on a dynamic length audio, with the generation of accessible results for further processing in other applications.
+The intention behind the prototype is to construct a guide for building a more elevated classifier which uses the newly emerged techniques around \gls{nlp}.
+
+This thesis is structured as follows. Chapter \ref{ch:background} highlights the work which contributed to the existence of this thesis. It includes a brief overview of language analysis methods and the current state of the use of \gls{ml} in this field. Chapter \ref{ch:dataset} introduces the data we used for learning (i.e. training, model evaluation and selection) and chapter \ref{ch:method} presents and discusses the methodology included in the experiments. The steps and configuration used for the results and their outcomes are described and discussed in chapter \ref{ch:experiments}.
+Finally, the conclusions from the results are drawn in the first part of chapter \ref{ch:conclusions}, in the second we render the feature works.
